@@ -1,0 +1,38 @@
+{
+  "name": "@bbva-web-components/pokeapi-dm",
+  "version": "1.0.0-rc.1",
+  "description": "",
+  "keywords": [],
+  "exports": {
+    ".": "./index.js",
+    "./pokeapi-dm.js": "./pokeapi-dm.js"
+  },
+  "main": "index.js",
+  "type": "module",
+  "files": [
+    "/src/",
+    "/locales/",
+    "*.js",
+    "!**/*.scss"
+  ],
+  "scripts": {
+    "test": "cells lit-component:test",
+    "test:watch": "cells lit-component:test:watch",
+    "serve": "cells lit-component:serve",
+    "clean": "rm -rf node_modules && rm -rf package-lock.json && npm cache clean --force && rm -rf build"
+  },
+  "dependencies": {
+    "@bbva-global-apis-dm/bbva-global-generic-dm": "^2.3.0",
+    "@bbva-web-components/bbva-core-lit-helpers": "^1.0.0",
+    "@bbva-web-components/bbva-foundations-styles": "^2.0.0",
+    "lit-element": "^2.0.0",
+    "lit-html": "^1.0.0"
+  },
+  "devDependencies": {
+    "@bbva-web-components/bbva-dev-demo-helper": "^1.0.0",
+    "@bbva-web-components/bbva-dev-demo-theme": "^2.0.0",
+    "@bbva-web-components/bbva-foundations-sass": "^1.0.0",
+    "@open-wc/testing": "^3.0.0"
+  },
+  "customElements": "custom-elements.json"
+}

@@ -1,0 +1,21 @@
+.DS_Store
+
+
+coverage/
+node_modules/
+demo/locales/
+*-log.json
+*-error.json
+
+*.d.ts
+*.tgz
+components
+.DS_Store
+build
+
+# cellsjs validator
+
+cells.log
+coverage*
+.idea/
+build/

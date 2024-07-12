@@ -1,0 +1,66 @@
+{
+    "schema_version": "1.0.0",
+    "classes": [
+        {
+            "description": "![LitElement component](https://img.shields.io/badge/litElement-component-blue.svg)\n\nThis component ...\n\nExample:\n\n```html\n  <pokeapi-dm></pokeapi-dm>\n```",
+            "summary": "",
+            "path": "src/PokeapiDm.js",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "render",
+                    "description": "",
+                    "privacy": "public",
+                    "sourceRange": {
+                        "start": {
+                            "line": 28,
+                            "column": 2
+                        },
+                        "end": {
+                            "line": 35,
+                            "column": 3
+                        }
+                    },
+                    "metadata": {},
+                    "params": []
+                },
+                {
+                    "name": "getPokemonList",
+                    "description": "",
+                    "privacy": "public",
+                    "sourceRange": {
+                        "start": {
+                            "line": 37,
+                            "column": 2
+                        },
+                        "end": {
+                            "line": 45,
+                            "column": 3
+                        }
+                    },
+                    "metadata": {},
+                    "params": [],
+                    "return": {
+                        "type": "void"
+                    }
+                }
+            ],
+            "staticMethods": [],
+            "demos": [],
+            "metadata": {},
+            "sourceRange": {
+                "start": {
+                    "line": 14,
+                    "column": 7
+                },
+                "end": {
+                    "line": 46,
+                    "column": 1
+                }
+            },
+            "privacy": "public",
+            "superclass": "LitElement",
+            "name": "PokeapiDm"
+        }
+    ]
+}
