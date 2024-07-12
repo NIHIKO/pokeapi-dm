@@ -15,7 +15,6 @@ import '@bbva-global-apis-dm/bbva-global-generic-dm';
 export class PokeapiDm extends LitElement {
   static get properties() {
     return {
-      host: { type: String },
       path: { type: String },
     };
   }
