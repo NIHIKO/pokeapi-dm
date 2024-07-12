@@ -11,8 +11,20 @@
     </script>
     <script type="module" src="./demo.js"></script>
   </head>
+<body>
+  <pokeapi-dm id="#pokemonApi"></pokeapi-dm>
+  <button onclick="getPokemonDataDemo()">getPokemonList</button>
+  <button onclick="getPokemonDetailsDemo()">getPokemonDetails</button>
+</body>
+<script>
+  const pokemonApi = document.getElementById('pokemonApi');
+  function getPokemonDataDemo() {
+    pokemonApi.getPokemonData();
+  };
 
-  <body>
-    <pokeapi-dm></pokeapi-dm>
-  </body>
+  function getPokemonDetailsDemo() {
+    pokemonApi.path = 'ditto';
+    pokemonApi.getPokemonInfo();
+  };
+</script>
 </html>
