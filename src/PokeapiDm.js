@@ -35,6 +35,12 @@ export class PokeapiDm extends LitElement {
         @request-success="${this._getPokemonSuccess}"
         @request-error="${this._getPokemonError}"
         ></bbva-global-generic-dm>
+        <bbva-global-generic-dm
+        id="el2"
+        method="GET"
+        @request-success="${this._getPokemonInfoSuccess}"
+        @request-error="${this._getPokemonInfoError}"
+        ></bbva-global-generic-dm>
       <button
         class="btn btn-primary"
         type="button"
@@ -59,9 +65,32 @@ export class PokeapiDm extends LitElement {
     }));
   }
 
+  _getPokemonInfoSuccess(success) {
+    console.log(success.detail);
+    this.dispatchEvent(new CustomEvent('get-pokemon-info-success', {
+      detail: success.detail
+    }));
+  }
+
+  _getPokemonInfoError(error) {
+    console.log(error.detail);
+    this.dispatchEvent(new CustomEvent('get-pokemon-info-error', {
+      detail: error.detail
+    }));
+  }
+
   async getPokemonData() {
     await this.requestUpdate();
     const genericDM = this .shadowRoot.querySelector('#el');
+    genericDM.path = this.params.path;
+    genericDM.host = 'https://pokeapi.co/api/v2/pokemon/';
+    genericDM.crossDomain = false;
+    genericDM.getData();
+  }
+
+  async getPokemonInfo() {
+    await this.requestUpdate();
+    const genericDM = this .shadowRoot.querySelector('#el2');
     genericDM.path = this.params.path;
     genericDM.host = 'https://pokeapi.co/api/v2/pokemon/';
     genericDM.crossDomain = false;
