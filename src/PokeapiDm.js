@@ -32,8 +32,8 @@ export class PokeapiDm extends LitElement {
       <bbva-global-generic-dm
         id="el"
         method="GET"
-        @request-success="${this._getCommissionSuccess}"
-        @request-error="${this._getCommissionError}"
+        @request-success="${this._getPokemonSuccess}"
+        @request-error="${this._getPokemonError}"
         ></bbva-global-generic-dm>
       <button
         class="btn btn-primary"
@@ -45,16 +45,16 @@ export class PokeapiDm extends LitElement {
     `;
   }
 
-  _getCommissionSuccess(success) {
+  _getPokemonSuccess(success) {
     console.log(success.detail);
-    this.dispatchEvent(new CustomEvent('get-commission-success', {
+    this.dispatchEvent(new CustomEvent('get-pokemon-success', {
       detail: success.detail
     }));
   }
 
-  _getCommissionError(error) {
+  _getPokemonError(error) {
     console.log(error.detail);
-    this.dispatchEvent(new CustomEvent('get-commission-error', {
+    this.dispatchEvent(new CustomEvent('get-pokemon-error', {
       detail: error.detail
     }));
   }
