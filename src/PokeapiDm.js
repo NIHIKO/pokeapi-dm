@@ -48,12 +48,12 @@ export class PokeapiDm extends LitElement {
     genericDM.getData();
   }
 
-  async getPokemonInfo() {
+  async getPokemonInfo(path) {
+    console.log("el path", "https://pokeapi.co/api/v2/pokemon/" + path)
     await this.requestUpdate();
     const genericDM = this.shadowRoot.querySelector("#el2");
-    genericDM.path = this.path;
     genericDM.method = "GET";
-    genericDM.host = "https://pokeapi.co/api/v2/pokemon/";
+    genericDM.host = "https://pokeapi.co/api/v2/pokemon/" + path;
     genericDM.crossDomain = false;
     genericDM.getData();
   }
